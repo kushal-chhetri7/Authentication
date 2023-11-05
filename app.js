@@ -126,8 +126,6 @@ app.post("/login", function(req, res) {
 
 });
 
-//home
-
 app.get('/home', (req, res) => {
     res.render('home')
 })
