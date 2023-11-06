@@ -21,7 +21,7 @@ app.use(session({
     secret: "Our little secret.",
     resave: false,
     saveUninitialized: false
-}));
+}));   
 
 app.use(passport.initialize());
 app.use(passport.session());
