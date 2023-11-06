@@ -130,11 +130,6 @@ app.get('/home', (req, res) => {
     res.render('home')
 })
 
-
-
-
-
-
 app.listen(port, () => {
     console.log(`Listening at port ${port} `)
 })
