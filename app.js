@@ -74,7 +74,6 @@ app.post("/register", function(req, res) {
 });
 
 //register with google 
-
 passport.use(new GoogleStrategy({
         clientID: process.env.CLIENT_ID,
         clientSecret: process.env.CLIENT_SERECT,
