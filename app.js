@@ -36,7 +36,6 @@ const userSchema = new mongoose.Schema({
     googleId: String,
 });
 
-
 userSchema.plugin(passportLocalMongoose);
 userSchema.plugin(findOrCreate);
 
@@ -63,7 +62,7 @@ app.post("/register", function(req, res) {
         if (err) {
             console.log(err);
             res.redirect('/register')
-                // res.send("You already have account on this email");
+                res.send("You already have an account with this email");
         } else {
             passport.authenticate("local")(req, res, function() {
                 res.redirect('/login')
@@ -122,7 +121,6 @@ app.post("/login", function(req, res) {
             });
         }
     });
-
 });
 
 app.get('/home', (req, res) => {
