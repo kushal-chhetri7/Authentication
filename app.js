@@ -99,12 +99,10 @@ app.get("/auth/google/home",
         res.redirect("/home");
     });
 
-
-//login
-
 app.get('/login', (req, res) => {
     res.render('login')
 });
+
 
 app.post("/login", function(req, res) {
     const user = new User({
@@ -122,10 +120,11 @@ app.post("/login", function(req, res) {
     });
 });
 
+
 app.get('/home', (req, res) => {
     res.render('home')
 })
 
 app.listen(port, () => {
-    console.log(`Listening at port Number: ${port} `)
+    console.log(`Listening at port number: ${port} `)
 }) 
