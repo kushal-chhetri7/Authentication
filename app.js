@@ -103,7 +103,6 @@ app.get('/login', (req, res) => {
     res.render('login')
 });
 
-
 app.post("/login", function(req, res) {
     const user = new User({
         username: req.body.username,
