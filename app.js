@@ -26,8 +26,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect(process.env.DATABASE_CONNECTION, { useNewUrlParser: true }).then(console.log("Success"));
-// mongoose.set("useCreateIndex", true);
+mongoose.connect(process.env.DATABASE_CONNECTION, { useNewUrlParser: true }).then(console.lo
 
 //Registration
 const userSchema = new mongoose.Schema({
